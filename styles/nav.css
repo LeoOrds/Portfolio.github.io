@@ -1,0 +1,75 @@
+nav{
+    position: relative;
+    background-color: black;
+}
+.logo{
+    position: absolute;
+    margin-left: 20%;
+}
+.logo1{
+    display: none;
+}
+.logo h1 span{
+    color: #2050df;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 30px ;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #3661e2;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+nav ul li a:hover::after{
+    width: 100%;
+    transition: 0.5s;
+}
+.ulo-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.ulo-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.ulo-text h1 span{
+    color: blue;
+}
+.navtitulo{
+    font-size: 20px;
+    font-weight: 600;
+}
+@media only screen and (max-width:912px){
+    .logo{
+        display: none;
+    }
+    .logo1{
+        display: block;
+        margin-left: 20px;
+    }
+    .logo1 span{
+        color: blue;
+    }
+}
+@media only screen and (max-width:1024px){
+    .logo{
+        margin-left: 5%;
+    }
+}
+@media only screen and (max-width:1280px){
+    .logo{
+        margin-left: 10%;
+    }
+}

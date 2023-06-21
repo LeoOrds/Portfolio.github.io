@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="../images/unnamed.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+     <link rel="stylesheet" href="../styles/about.css">
+     <link rel="stylesheet" href="../styles/nav.css">
+</head>
+<body class="katawan">  
+    <nav class="navbar fixed-top navbar-expand-lg" data-bs-theme="dark">
+        <div class="container-fluid justify-content-center">
+          <h1 class="logo1 navtitulo"><span>V</span>ictor<span>O</span>rdonio</h1>
+          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse flex-grow-0" id="navbarTogglerDemo02">
+            <ul class="navbar-nav text-center">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="logo">
+          <h1 class="navbar-brand navtitulo" href="#"><span>V</span>ictor<span>O</span>rdonio</h1>
+        </div>
+      </nav>
+    <div id="about">
+        <div class="container">
+        <div class="row">
+            <div class="col -lg-4">
+                <img src="../images/mypic.jpg" class="img-fluid about-img">
+            </div>
+            <div class="col-lg-8">
+                <h1 class="sub-title">About me</h1>
+                <p>I am Victor Louis N. Ordonio a graduate of KodeGo Bootcamp, WebDeveloper. <br>
+                I mostly focus on FrontEnd web development using Css Bootstrap and JavaScript but in my free time, I also study BackEnd
+                using php and xampp for data base to further enhance my skills. <br> 
+                My special soft skills is that I am eager to learn and open to new ideas. 
+              </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Job Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Educataion</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Front-End</span> <br>Css <br>Bootstrap <br>JavaScript</li>
+                        <li><span>Back-End</span> <br>Xampp <br>PHP</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>RHU of Bautista, Pangasinan</span> <br>Data Encoder, Covid high risk</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>KodeGo Bootcamp</span> <br>WebDeveloper</li>
+                        <li><span>Senior High School</span> <br>Humanities and Social Sciences</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");    
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
